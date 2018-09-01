@@ -13,7 +13,7 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
     <div class="row">
-        <div class="col-2 bg-light h-100 pt-4">
+        <div class="col-2 bg-light h-100 pt-4 sticky-top">
             <div class="container">
                 <nav class="nav flex-column">
                     <a class="nav-link active" href="/category?value=0">All</a>
@@ -31,21 +31,20 @@
         </div>
 
         <div class="col-10">
-            <div class="container">
+            <div class="container pb-5 pt-5">
                 <h1>All the category of Ads</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores assumenda aut beatae blanditiis debitis deserunt enim explicabo, fugit illo ipsa ipsum.</p>
                 <p>----------------------------------------------------------------------------------</p>
                     <c:forEach var="ad" items="${catAd}">
-
-                            <a href="/viewAd?adId=${ad.id}">
-                            <div style="border: 1px solid grey; display: block; float: left; width: 30%; margin-right: 10px; height: 220px;" class="col-md-4">
+                        <a href="/viewAd?adId=${ad.id}">
+                            <%--<div style="border: 1px solid grey; display: block; float: left; width: 30%; margin-right: 10px; height: 220px;" class="col-md-4">--%>
+                            <div class="myCard cardCat">
                                 <h2>${ad.title}</h2>
                                 <p>${ad.description}</p>
                                 <p>Created On: ${ad.dateMade} by ${ad.username}</p>
                                 <p>Categories: ${ad.catString}</p>
                             </div>
-                            </a>
-
+                        </a>
                     </c:forEach>
             </div>
         </div>

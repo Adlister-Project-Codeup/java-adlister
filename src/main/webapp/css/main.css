@@ -14,14 +14,24 @@ body {
     white-space: nowrap;
 }
 
-.cardAd {
+.myCard {
     border: 1px solid #f2f2f2;
     display: inline-block;
     height: 250px;
-    overflow: hidden !important;
     padding: 25px;
-    margin-right: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cardAd {
+    overflow: hidden !important;
+    margin-right: 20px;
+}
+
+.cardCat {
+    overflow: auto !important;
+    margin-right: 10px;
+    width: 30%;
+    overflow: auto;
 }
 
 a:link, a:visited, a:hover {

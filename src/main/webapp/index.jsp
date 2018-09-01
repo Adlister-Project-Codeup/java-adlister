@@ -13,9 +13,9 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <div class="row pt-4">
+        <div class="row pt-3">
             <div class="col-7">
-                <h1>Buy, sell, create Ads & Make $</h1>
+                <h1>Gregslist</h1>
                 <%--<h4 style="font-size:3vw;">--%>
                 <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolores earum eius illo itaque iure, iusto labore laborum</h4>
             </div>
