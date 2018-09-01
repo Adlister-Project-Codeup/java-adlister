@@ -5,9 +5,27 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Welcome to my site!" />
     </jsp:include>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <%--<link rel="stylesheet" type="text/css" href="css/main.css">--%>
     <style>
-
+        #container {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+        .cardAd {
+            border: 1px solid #f2f2f2;
+            display: inline-block;
+            height: 250px;
+            overflow: hidden !important;
+            padding: 25px;
+            margin-right: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            background-image: radial-gradient(white, white, #e6eeff);
+        }
+        a:link, a:visited, a:hover {
+            color: black;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -49,73 +67,77 @@
             </c:forEach>
         </div>
 
-        <form class="row pt-4" action="/category" method="GET">
-            <a href="/category?value=7">Cars</a>
-        </form>
-        <div id="container">
-            <c:forEach var="ad" items="${cars}">
-                <a href="/viewAd?adId=${ad.id}">
-                    <div class="cardAd col-md-4">
-                        <h2>${ad.title}</h2>
-                        <p>${ad.description}</p>
-                        <p>Categories: ${ad.catString}</p>
-                        <br>
-                        <p>Created by: ${ad.username} on, ${ad.dateMade} </p>
-                    </div>
-                </a>
-            </c:forEach>
-        </div>
+        <%--<form class="row pt-4" action="/category" method="GET">--%>
+            <%--<a href="/category?value=7">Cars</a>--%>
+        <%--</form>--%>
+        <%--<div id="container">--%>
+            <%--<c:forEach var="ad" items="${cars}">--%>
+                <%--<a href="/viewAd?adId=${ad.id}">--%>
+                    <%--<div class="myCard cardAd">--%>
+                        <%--<h2>${ad.title}</h2>--%>
+                        <%--<p>${ad.description}</p>--%>
+                        <%--<p>Categories: ${ad.catString}</p>--%>
+                        <%--<br>--%>
+                        <%--<p>Created by: ${ad.username} on, ${ad.dateMade} </p>--%>
+                    <%--</div>--%>
+                <%--</a>--%>
+            <%--</c:forEach>--%>
+        <%--</div>--%>
 
-        <form class="row pt-4" action="/category" method="GET">
-            <a href="/category?value=3">Computers</a>
-        </form>
-        <div id="container">
-            <c:forEach var="ad" items="${computers}">
-                <a href="/viewAd?adId=${ad.id}">
-                    <div class="cardAd col-md-4">
-                        <h2>${ad.title}</h2>
-                        <p>${ad.description}</p>
-                        <p>Categories: ${ad.catString}</p>
-                        <br>
-                        <p>Created by: ${ad.username} on, ${ad.dateMade} </p>
-                    </div>
-                </a>
-            </c:forEach>
-        </div>
+        <%--<form class="row pt-4" action="/category" method="GET">--%>
+            <%--<a href="/category?value=3">Computers</a>--%>
+        <%--</form>--%>
+        <%--<div id="container">--%>
+            <%--<c:forEach var="ad" items="${computers}">--%>
+                <%--<a href="/viewAd?adId=${ad.id}">--%>
+                    <%--<div class="myCard cardAd">--%>
+                        <%--<h2>${ad.title}</h2>--%>
+                        <%--<p>${ad.description}</p>--%>
+                        <%--<p>Categories: ${ad.catString}</p>--%>
+                        <%--<br>--%>
+                        <%--<p>Created by: ${ad.username} on, ${ad.dateMade} </p>--%>
+                    <%--</div>--%>
+                <%--</a>--%>
+            <%--</c:forEach>--%>
+        <%--</div>--%>
 
-        <form class="row pt-4" action="/category" method="GET">
-            <a href="/category?value=5">Jobs</a>
-        </form>
-        <div id="container">
-            <c:forEach var="ad" items="${jobs}">
-                <a href="/viewAd?adId=${ad.id}">
-                    <div class="cardAd col-md-4">
-                        <h2>${ad.title}</h2>
-                        <p>${ad.description}</p>
-                        <p>Categories: ${ad.catString}</p>
-                        <br>
-                        <p>Created by: ${ad.username} on, ${ad.dateMade} </p>
-                    </div>
-                </a>
-            </c:forEach>
-        </div>
+        <%--<form class="row pt-4" action="/category" method="GET">--%>
+            <%--<a href="/category?value=5">Jobs</a>--%>
+        <%--</form>--%>
+        <%--<div id="container">--%>
+            <%--<c:forEach var="ad" items="${jobs}">--%>
+                <%--<a href="/viewAd?adId=${ad.id}">--%>
+                    <%--<div class="myCard cardAd">--%>
+                        <%--<h2>${ad.title}</h2>--%>
+                        <%--<p>${ad.description}</p>--%>
+                        <%--<p>Categories: ${ad.catString}</p>--%>
+                        <%--<br>--%>
+                        <%--<p>Created by: ${ad.username} on, ${ad.dateMade} </p>--%>
+                    <%--</div>--%>
+                <%--</a>--%>
+            <%--</c:forEach>--%>
+        <%--</div>--%>
 
-        <form class="row pt-4" action="/category" method="GET">
-            <a href="/category?value=8">Furniture</a>
-        </form>
-        <div id="container">
-            <c:forEach var="ad" items="${furniture}">
-                <a href="/viewAd?adId=${ad.id}">
-                    <div class="cardAd col-md-4">
-                        <h2>${ad.title}</h2>
-                        <p>${ad.description}</p>
-                        <p>Categories: ${ad.catString}</p>
-                        <br>
-                        <p>Created by: ${ad.username} on, ${ad.dateMade} </p>
-                    </div>
-                </a>
-            </c:forEach>
-        </div>
+        <%--<form class="row pt-4" action="/category" method="GET">--%>
+            <%--<a href="/category?value=8">Furniture</a>--%>
+        <%--</form>--%>
+        <%--<div id="container">--%>
+            <%--<c:forEach var="ad" items="${furniture}">--%>
+                <%--<a href="/viewAd?adId=${ad.id}">--%>
+                    <%--<div class="myCard cardAd">--%>
+                        <%--<h2>${ad.title}</h2>--%>
+                        <%--<p>${ad.description}</p>--%>
+                        <%--<p>Categories: ${ad.catString}</p>--%>
+                        <%--<br>--%>
+                        <%--<p>Created by: ${ad.username} on, ${ad.dateMade} </p>--%>
+                    <%--</div>--%>
+                <%--</a>--%>
+            <%--</c:forEach>--%>
+        <%--</div>--%>
+
+
+
+
         <%--<div class="row pt-1">--%>
             <%--<div class="col-4">--%>
                 <%--<img style="height: 200px" class="d-block w-100" src="http://media.caranddriver.com/images/17q4/692996/2019-mclaren-senna-hypercar-official-photos-and-info-news-car-and-driver-photo-698055-s-original.jpg" alt="First slide">--%>
