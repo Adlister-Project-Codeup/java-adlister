@@ -6,9 +6,6 @@
         <jsp:param name="title" value="Welcome to my site!" />
     </jsp:include>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <style>
-
-    </style>
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
@@ -21,24 +18,24 @@
             </div>
             <div class="col-5">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Not a member yet?</h5>
+                    <div class="card-body reg">
+                        <h5 class="card-title font-weight-bold">Not a member yet?</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                         <form action="/register" method="GET">
-                            <a href="/register" class="btn btn-primary">Register</a>
+                            <a href="/register" class="btn btn-primary text-light blk" style="background:#d4372b">Register</a>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
 
-        <form class="row pt-" action="/ads" method="GET">
-            <a href="/category?value=0">View all recent</a>
+        <form class="row pt-4" action="/ads" method="GET">
+            <a class="red-text" href="/category?value=0">>> VIEW ALL RECENT</a>
         </form>
-        <div id="container">
+        <div class="scrollBx">
             <c:forEach var="ad" items="${all}">
                 <a href="/viewAd?adId=${ad.id}">
-                    <div class="cardAd col-md-4">
+                    <div class="cards mr-2">
                         <h2>${ad.title}</h2>
                         <p>${ad.description}</p>
                         <p>Categories: ${ad.catString}</p>
@@ -50,12 +47,12 @@
         </div>
 
         <form class="row pt-4" action="/category" method="GET">
-            <a href="/category?value=7">Cars</a>
+            <a class="red-text" href="/category?value=7">>> CARS</a>
         </form>
-        <div id="container">
+        <div class="scrollBx">
             <c:forEach var="ad" items="${cars}">
                 <a href="/viewAd?adId=${ad.id}">
-                    <div class="cardAd col-md-4">
+                    <div class="cards mr-2">
                         <h2>${ad.title}</h2>
                         <p>${ad.description}</p>
                         <p>Categories: ${ad.catString}</p>
@@ -67,12 +64,12 @@
         </div>
 
         <form class="row pt-4" action="/category" method="GET">
-            <a href="/category?value=3">Computers</a>
+            <a class="red-text" href="/category?value=3">>> COMPUTERS</a>
         </form>
-        <div id="container">
+        <div class="scrollBx">
             <c:forEach var="ad" items="${computers}">
                 <a href="/viewAd?adId=${ad.id}">
-                    <div class="cardAd col-md-4">
+                    <div class="cards mr-2">
                         <h2>${ad.title}</h2>
                         <p>${ad.description}</p>
                         <p>Categories: ${ad.catString}</p>
@@ -84,12 +81,12 @@
         </div>
 
         <form class="row pt-4" action="/category" method="GET">
-            <a href="/category?value=5">Jobs</a>
+            <a class="red-text" href="/category?value=5">>> JOBS</a>
         </form>
-        <div id="container">
+        <div class="scrollBx">
             <c:forEach var="ad" items="${jobs}">
                 <a href="/viewAd?adId=${ad.id}">
-                    <div class="cardAd col-md-4">
+                    <div class="cards mr-2">
                         <h2>${ad.title}</h2>
                         <p>${ad.description}</p>
                         <p>Categories: ${ad.catString}</p>
@@ -101,12 +98,12 @@
         </div>
 
         <form class="row pt-4" action="/category" method="GET">
-            <a href="/category?value=8">Furniture</a>
+            <a class="red-text" href="/category?value=8">>> FURNITURE</a>
         </form>
-        <div id="container">
+        <div class="scrollBx">
             <c:forEach var="ad" items="${furniture}">
                 <a href="/viewAd?adId=${ad.id}">
-                    <div class="cardAd col-md-4">
+                    <div class="cards mr-2">
                         <h2>${ad.title}</h2>
                         <p>${ad.description}</p>
                         <p>Categories: ${ad.catString}</p>
@@ -116,24 +113,13 @@
                 </a>
             </c:forEach>
         </div>
-        <%--<div class="row pt-1">--%>
-            <%--<div class="col-4">--%>
-                <%--<img style="height: 200px" class="d-block w-100" src="http://media.caranddriver.com/images/17q4/692996/2019-mclaren-senna-hypercar-official-photos-and-info-news-car-and-driver-photo-698055-s-original.jpg" alt="First slide">--%>
-            <%--</div>--%>
-            <%--<div class="col-4">--%>
-                <%--<img style="height: 200px" class="d-block w-100" src="https://www.popsci.com/sites/popsci.com/files/styles/1000_1x_/public/images/2018/03/senna.jpg?itok=eYNPMGjA&fc=50,50" alt="Second slide">--%>
-            <%--</div>--%>
-            <%--<div class="col-4">--%>
-                <%--<img style="height: 200px" class="d-block w-100" src="https://amp.businessinsider.com/images/592f4169b74af41b008b5977-750-563.jpg" alt="Third slide">--%>
-            <%--</div>--%>
-        <%--</div>--%>
 
         <%-- ALL OTHER PAGES NEED THIS TAG--%>
         <jsp:include page="WEB-INF/partials/js-script.jsp" />
 
         <footer class="pt-4 pb-4">
             <ul class="nav nav-pills nav-fill">
-                <li class="nav-item dropdown">
+                <li id="catBtn" class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="/ads">Recent</a>
