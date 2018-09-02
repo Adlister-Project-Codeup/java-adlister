@@ -9,40 +9,88 @@ body {
     background-image: linear-gradient(to top right,#f8f9fa ,#323232);
 }
 
-/*body::-webkit-scrollbar:horizontal {*/
-    /*background-color: red;*/
-/*}*/
-
-#container {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    /*white-space: nowrap;*/
-}
-
-.myCard {
-    overflow-y: hidden;
-    border: 1px solid #f2f2f2;
-    display: inline-block;
-    height: 250px;
-    padding: 25px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
-}
-
-.cardAd {
-    /*overflow: hidden !important;*/
-    margin-right: 20px;
-}
-
-.cardCat {
-    /*overflow: auto !important;*/
-    margin-right: 10px;
-    width: 30%;
-    overflow: auto;
+nav {
+    background-color: #BBBCBC;
+    background-image: url("../img/navbar1.png") !important;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 a:link, a:visited, a:hover {
     color: black;
     text-decoration: none;
-    word-wrap: break-word;
 }
+
+a.red-text:hover {
+    color: #cb3329;
+}
+
+a.blk:hover {
+    color: black !important;
+}
+
+#side-nav > a:hover, footer a:active, a:visited {
+    background-color: #cb3329 !important;
+}
+
+/* !! MAKES THE HORIZONTAL SCROLL BAR DISAPPEAR !! */
+.scrollBx::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollBx {
+    overflow-x: auto;
+    overflow-y: hidden !important;
+    white-space: nowrap;
+    height: 275px;
+}
+
+.cards {
+    overflow: auto !important;
+    border: 1px solid #f2f2f2;
+    display: inline-block;
+    height: 265px;
+    padding: 10px 15px;
+    width: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    /*box-shadow: 0 .2em .6em black;*/
+    white-space: normal;
+
+    /*image*/
+    background-color: #BBBCBC;
+    background-image: url("../img/card1.png");
+    width: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.reg {
+    background-color: #BBBCBC;
+    background-image: url("../img/register.png");
+    width: 100%;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.cards:hover {
+    opacity: 0.4;
+}
+
+.cardCat {
+    margin-right: 10px;
+    width: 30%;
+    overflow: auto;
+}
+
+.btn {
+    border: none !important;
+}
+
+
+
+
+
