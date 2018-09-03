@@ -30,6 +30,7 @@ public class CategoryServlet extends HttpServlet {
             }
 
             if ("1".equalsIgnoreCase(category)) {
+                request.setAttribute("cat", "sports");
                 // System.out.println(info.getCatString());
                 if(info.getCatString().toLowerCase().contains("sports")){
                     sortedAd.add(info.getTitle());
@@ -38,6 +39,7 @@ public class CategoryServlet extends HttpServlet {
             }
 
             if ("2".equalsIgnoreCase(category)) {
+                request.setAttribute("cat", "camping");
                 if(info.getCatString().toLowerCase().contains("camping")){
                     sortedAd.add(info.getTitle());
                     request.setAttribute("catAd", DaoFactory.getAdsDao().selWhile((long) 2));
@@ -45,6 +47,7 @@ public class CategoryServlet extends HttpServlet {
             }
 
             if ("3".equalsIgnoreCase(category)) {
+                request.setAttribute("cat", "computers");
                 if(info.getCatString().toLowerCase().contains("computers")){
                     sortedAd.add(info.getTitle());
                     request.setAttribute("catAd", DaoFactory.getAdsDao().selWhile((long) 3));
@@ -52,6 +55,7 @@ public class CategoryServlet extends HttpServlet {
             }
 
             if ("4".equalsIgnoreCase(category)) {
+                request.setAttribute("cat", "phones");
                 if(info.getCatString().toLowerCase().contains("phones")){
                     sortedAd.add(info.getTitle());
                     request.setAttribute("catAd", DaoFactory.getAdsDao().selWhile((long) 4));
@@ -59,6 +63,7 @@ public class CategoryServlet extends HttpServlet {
             }
 
             if ("5".equalsIgnoreCase(category)) {
+                request.setAttribute("cat", "jobs");
                 if(info.getCatString().toLowerCase().contains("jobs")){
                     sortedAd.add(info.getTitle());
                     request.setAttribute("catAd", DaoFactory.getAdsDao().selWhile((long) 5));
@@ -66,6 +71,7 @@ public class CategoryServlet extends HttpServlet {
             }
 
             if ("6".equalsIgnoreCase(category)) {
+                request.setAttribute("cat", "clothing");
                 if(info.getCatString().toLowerCase().contains("clothing")){
                     sortedAd.add(info.getTitle());
                     request.setAttribute("catAd", DaoFactory.getAdsDao().selWhile((long) 6));
@@ -73,6 +79,7 @@ public class CategoryServlet extends HttpServlet {
             }
 
             if ("7".equalsIgnoreCase(category)) {
+                request.setAttribute("cat", "cars");
                 if(info.getCatString().toLowerCase().contains("cars")){
                     sortedAd.add(info.getTitle());
                     request.setAttribute("catAd", DaoFactory.getAdsDao().selWhile((long) 7));
@@ -80,6 +87,7 @@ public class CategoryServlet extends HttpServlet {
             }
 
             if ("8".equalsIgnoreCase(category)) {
+                request.setAttribute("cat", "furniture");
                 if(info.getCatString().toLowerCase().contains("furniture")){
                     sortedAd.add(info.getTitle());
                     request.setAttribute("catAd", DaoFactory.getAdsDao().selWhile((long) 8));
@@ -87,6 +95,7 @@ public class CategoryServlet extends HttpServlet {
             }
 
             if ("9".equalsIgnoreCase(category)) {
+                request.setAttribute("cat", "other");
                 if(info.getCatString().toLowerCase().contains("other")){
                     sortedAd.add(info.getTitle());
                     request.setAttribute("catAd", DaoFactory.getAdsDao().selWhile((long) 9));

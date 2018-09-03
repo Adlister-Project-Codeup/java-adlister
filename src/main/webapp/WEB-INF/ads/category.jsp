@@ -32,7 +32,33 @@
 
         <div class="col-10">
             <div class="container pb-5 pt-5">
-                <h1 class="w-text">All the category of Ads</h1>
+                <c:if test="${cat == 'sports'}" >
+                    <h1 class="w-text">All ads related to Sports</h1>
+                </c:if>
+                <c:if test="${cat == 'camping'}" >
+                    <h1 class="w-text">All ads related to Camping</h1>
+                </c:if>
+                <c:if test="${cat == 'computers'}" >
+                    <h1 class="w-text">All ads related to Computers</h1>
+                </c:if>
+                <c:if test="${cat == 'phones'}" >
+                    <h1 class="w-text">All ads related to Phones</h1>
+                </c:if>
+                <c:if test="${cat == 'jobs'}" >
+                    <h1 class="w-text">All ads related to Jobs</h1>
+                </c:if>
+                <c:if test="${cat == 'clothing'}" >
+                    <h1 class="w-text">All ads related to Clothing</h1>
+                </c:if>
+                <c:if test="${cat == 'cars'}" >
+                    <h1 class="w-text">All ads related to Cars</h1>
+                </c:if>
+                <c:if test="${cat == 'furniture'}" >
+                    <h1 class="w-text">All ads related to Furniture</h1>
+                </c:if>
+                <c:if test="${cat == 'other'}" >
+                    <h1 class="w-text">All ads related to Other</h1>
+                </c:if>
                 <p class="w-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores assumenda aut beatae blanditiis debitis deserunt enim explicabo, fugit illo ipsa ipsum.</p>
                     <c:forEach var="ad" items="${catAd}">
                         <a class="blk" href="/viewAd?adId=${ad.id}">
