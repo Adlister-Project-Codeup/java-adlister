@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Raleway");
+
+body {
+    font-family: "Raleway", sans-serif;
+    background-color: #252529;
+    margin: 0;
+    /*color: white;*/
+}
+
+.welcome-msg {
+    font-size: 4rem;
+    color: white;
+}
+
+.card-title {
+    font-size: 2rem;
+}
+
+.adCards {
+    background-color:  #f4f4f4;
+}
+
+.account-info {
+    font-family: Montserrat;
+}
