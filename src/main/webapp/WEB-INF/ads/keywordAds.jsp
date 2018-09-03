@@ -11,8 +11,8 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="row no-gutters">
-        <div id="sideImg" class="col-2 h-100 pt-4 sticky-top">
-            <div >
+        <div  class="col-2 sticky-top pt-4 h-100">
+            <div id="sideImg">
                 <nav id="side-nav" class="nav flex-column">
                     <a class="w-text nav-link active pl-5" href="/category?value=0">All</a>
                     <a class="w-text nav-link pl-5" href="/category?value=1"><i class="fa fa-bicycle"></i> Sports</a>
