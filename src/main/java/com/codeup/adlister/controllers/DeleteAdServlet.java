@@ -22,7 +22,9 @@ public class DeleteAdServlet extends HttpServlet {
             try {
                 System.out.println(DaoFactory.getAdsDao().deleteAdFromAdCategories(adId));
                 System.out.println(DaoFactory.getAdsDao().deleteAdFromAdTable(adId));
-                request.getRequestDispatcher("/WEB-INF/ads/deletedAd.jsp").forward(request, response);
+                request.setAttribute("deleted", true);
+
+                request.getRequestDispatcher("/WEB-INF/ads/AdUpdated.jsp").forward(request, response);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
