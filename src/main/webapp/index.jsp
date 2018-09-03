@@ -11,9 +11,8 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <div class="row pt-3">
-            <div class="col-7">
+            <div class="col-7 w-text">
                 <h1>Gregslist</h1>
-                <%--<h4 style="font-size:3vw;">--%>
                 <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolores earum eius illo itaque iure, iusto labore laborum</h4>
             </div>
             <div class="col-5">
@@ -30,11 +29,11 @@
         </div>
 
         <form class="row pt-4" action="/ads" method="GET">
-            <a class="red-text" href="/category?value=0">>> VIEW ALL RECENT</a>
+            <a class="red-hover w-text" href="/category?value=0">>> VIEW ALL RECENT ADS</a>
         </form>
-        <div class="scrollBx">
+        <div class="scrollBx ">
             <c:forEach var="ad" items="${all}">
-                <a href="/viewAd?adId=${ad.id}">
+                <a class="blk" href="/viewAd?adId=${ad.id}" class="dark">
                     <div class="cards mr-2">
                         <h2>${ad.title}</h2>
                         <p>${ad.description}</p>
@@ -47,11 +46,11 @@
         </div>
 
         <form class="row pt-4" action="/category" method="GET">
-            <a class="red-text" href="/category?value=7">>> CARS</a>
+            <a class="red-hover w-text" href="/category?value=7">>> CARS</a>
         </form>
         <div class="scrollBx">
             <c:forEach var="ad" items="${cars}">
-                <a href="/viewAd?adId=${ad.id}">
+                <a class="blk" href="/viewAd?adId=${ad.id}">
                     <div class="cards mr-2">
                         <h2>${ad.title}</h2>
                         <p>${ad.description}</p>
@@ -64,11 +63,11 @@
         </div>
 
         <form class="row pt-4" action="/category" method="GET">
-            <a class="red-text" href="/category?value=3">>> COMPUTERS</a>
+            <a class="red-hover w-text" href="/category?value=3">>> COMPUTERS</a>
         </form>
         <div class="scrollBx">
             <c:forEach var="ad" items="${computers}">
-                <a href="/viewAd?adId=${ad.id}">
+                <a class="blk" href="/viewAd?adId=${ad.id}">
                     <div class="cards mr-2">
                         <h2>${ad.title}</h2>
                         <p>${ad.description}</p>
@@ -81,11 +80,11 @@
         </div>
 
         <form class="row pt-4" action="/category" method="GET">
-            <a class="red-text" href="/category?value=5">>> JOBS</a>
+            <a class="red-hover w-text" href="/category?value=5">>> JOBS</a>
         </form>
         <div class="scrollBx">
             <c:forEach var="ad" items="${jobs}">
-                <a href="/viewAd?adId=${ad.id}">
+                <a class="blk" href="/viewAd?adId=${ad.id}">
                     <div class="cards mr-2">
                         <h2>${ad.title}</h2>
                         <p>${ad.description}</p>
@@ -98,11 +97,11 @@
         </div>
 
         <form class="row pt-4" action="/category" method="GET">
-            <a class="red-text" href="/category?value=8">>> FURNITURE</a>
+            <a class="red-hover w-text" href="/category?value=8">>> FURNITURE</a>
         </form>
         <div class="scrollBx">
             <c:forEach var="ad" items="${furniture}">
-                <a href="/viewAd?adId=${ad.id}">
+                <a class="blk" href="/viewAd?adId=${ad.id}">
                     <div class="cards mr-2">
                         <h2>${ad.title}</h2>
                         <p>${ad.description}</p>
@@ -116,32 +115,7 @@
 
         <%-- ALL OTHER PAGES NEED THIS TAG--%>
         <jsp:include page="WEB-INF/partials/js-script.jsp" />
-
-        <footer class="pt-4 pb-4">
-            <ul class="nav nav-pills nav-fill">
-                <li id="catBtn" class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/ads">Recent</a>
-                        <a class="dropdown-item" href="/category?value=1">Sports</a>
-                        <a class="dropdown-item" href="/category?value=2">Camping</a>
-                        <a class="dropdown-item" href="/category?value=3">Computers</a>
-                        <a class="dropdown-item" href="/category?value=4">Phones</a>
-                        <a class="dropdown-item" href="/category?value=5">Jobs</a>
-                        <a class="dropdown-item" href="/category?value=6">Clothing</a>
-                        <a class="dropdown-item" href="/category?value=7">Cars</a>
-                        <a class="dropdown-item" href="/category?value=8">Furniture</a>
-                        <a class="dropdown-item" href="/category?value=9">Other</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="topFunction()" id="myBtn" title="Go to top">Top</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Another Link</a>
-                </li>
-            </ul>
-        </footer>
+        <jsp:include page="/WEB-INF/partials/footer.jsp" />
     </div>
 </body>
 </html>
