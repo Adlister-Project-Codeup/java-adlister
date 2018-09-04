@@ -59,7 +59,7 @@
                 <c:if test="${cat == 'other'}" >
                     <h1 class="w-text">All ads related to Other</h1>
                 </c:if>
-                <p class="w-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores assumenda aut beatae blanditiis debitis deserunt enim explicabo, fugit illo ipsa ipsum.</p>
+                <p class="w-text">Listed below are ads seperated by category. Refer to the side navigation on the left or use the search bar above for a specific search.</p>
                     <c:forEach var="ad" items="${catAd}">
                         <a class="blk" href="/viewAd?adId=${ad.id}">
                             <div class="cards mr-3 mb-3">
