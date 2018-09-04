@@ -19,7 +19,8 @@
             <a class="nav-link red-hover w-text" href="#" onclick="topFunction()" id="myBtn" title="Go to top">Top</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link red-hover w-text" href="#">Another Link</a>
+            <a href="#"><i class="fa fa-facebook-official"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
         </li>
     </ul>
 </footer>

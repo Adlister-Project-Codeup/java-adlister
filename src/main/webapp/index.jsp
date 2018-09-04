@@ -13,13 +13,13 @@
         <div class="row pt-3">
             <div class="col-7 w-text">
                 <h1>Gregslist</h1>
-                <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolores earum eius illo itaque iure, iusto labore laborum</h4>
+                <h4>(Not to be confused with Craigslist) Buy, Sell, Trade, or post Job opportunities! Come one come all and browse through your communities amazing ads at prices no one can beat.</h4>
             </div>
             <div class="col-5">
                 <div class="card">
                     <div class="card-body reg">
                         <h5 class="card-title font-weight-bold">Not a member yet?</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text">Don't shop or list your valuable items at those other sketchy adlisters, sign up with Gregslist todayyy!</p>
                         <form action="/register" method="GET">
                             <a href="/register" class="btn btn-primary text-light blk" style="background:#d4372b">Register</a>
                         </form>
