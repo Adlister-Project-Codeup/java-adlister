@@ -20,10 +20,9 @@ public class CreateAdServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
-        request.getRequestDispatcher("/WEB-INF/ads/create.jsp")
-                .forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/ads/create.jsp").forward(request, response);
     }
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         try {
         String[] categories = request.getParameterValues("category");
         List<String> trimmedCategories = new ArrayList<>();
@@ -45,6 +44,8 @@ public class CreateAdServlet extends HttpServlet {
             List<Ad> userAds = DaoFactory.getAdsDao().getUserAds(user.getId()); // List of users Ads
             request.getSession().removeAttribute("userAds");
             request.getSession().setAttribute("userAds", userAds);
+            request.setAttribute("created", true);
+            request.getRequestDispatcher("/WEB-INF/ads/AdUpdated.jsp").forward(request, response);
 
             }
 //
@@ -53,6 +54,5 @@ public class CreateAdServlet extends HttpServlet {
         }
 
 
-        response.sendRedirect("/profile");
     }
 }
